@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test Integration') {
             steps {
-                sh 'grep Joel | wget -m http://localhost:8090/app-web-joel'
+                sh 'grep Joel | wget -m http://localhost:8090/app-web-demo'
                 echo 'Testing integration..'
             }
         }
