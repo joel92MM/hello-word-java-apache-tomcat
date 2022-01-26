@@ -18,13 +18,13 @@ pipeline {
             steps {
                 //sh ' docker stop $(docker ps -a -q)'
                 sh 'docker build -t hello-word-java-apache-tomcat .'
-                sh 'docker run -d --rm -p 8090:80 hello-word-java-apache-tomcat'
+                sh 'docker run -d --rm -p 8390:80 hello-word-java-apache-tomcat'
                 echo 'Deploying application....'
             }
         }
         stage('Test Integration') {
             steps {
-                sh 'grep Joel | wget -m http://localhost:8090/app-web-demo'
+                sh 'grep Joel | wget -m http://localhost:8390/app-web-demo'
                 echo 'Testing integration..'
             }
         }

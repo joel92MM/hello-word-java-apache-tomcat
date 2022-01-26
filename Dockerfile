@@ -5,5 +5,5 @@
 
   ADD ${WAR_FILE} /usr/local/tomcat/webapps/
 
-  EXPOSE 8090
+  EXPOSE 8390
   CMD ["catalina.sh", "run"]
