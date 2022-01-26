@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh 'sudo chmod 666 /var/run/docker.sock'
                 sh ' docker stop $(docker ps -a -q)'
                 sh 'docker build -t hello-word-java-apache-tomcat .'
                 sh 'docker run -d --rm -p 8390:80 hello-word-java-apache-tomcat'
