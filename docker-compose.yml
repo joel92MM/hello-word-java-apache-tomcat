@@ -9,7 +9,7 @@ services:
         CLUSTER_PW: secret_password
     image: wildfly_1
     ports:
-    - 8281:8080
+    - 8481:8080
     networks:
       wildfly_network:
 
@@ -21,7 +21,7 @@ services:
         CLUSTER_PW: secret_password
     image: wildfly_2
     ports:
-    - 8282:8080
+    - 8482:8080
     networks:
       wildfly_network:
 
