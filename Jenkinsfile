@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://www.despliegue.joelmmsystem.com:8390/app-web-demo'
+                sh 'grep wget -m http://www.despliegue.joelmmsystem.com:8390/app-web-demo'
                 echo 'Testing integration..'
             }
         }
