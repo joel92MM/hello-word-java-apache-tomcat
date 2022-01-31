@@ -17,13 +17,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 
-              
+                
                 echo 'Deploying application....'
             }
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://www.despliegue.joelmmsystem.com:8390'
+                sh 'wget -m http://www.despliegue.joelmmsystem.com:8390/app-web-demo'
                 echo 'Testing integration..'
             }
         }
