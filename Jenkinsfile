@@ -17,14 +17,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 
-                sh 'docker build -t hello-word-java-apache-tomcat .'
-                sh 'docker run -d --rm -p 8390:8080 hello-word-java-apache-tomcat'
+              
                 echo 'Deploying application....'
             }
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://www.despliegue.joelmmsystem.com:8390/app-web-demo'
+                sh 'wget -m http://www.despliegue.joelmmsystem.com:8390'
                 echo 'Testing integration..'
             }
         }
